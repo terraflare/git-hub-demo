@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <!--property name="hibernate.connection.url">jdbc:mysql://localhost:3306/stockgula</property-->
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/gula3</property>
+    <property name="hibernate.connection.username">root</property>
+    <!--property name="hibernate.connection.password">sus123</property-->
+    <property name="hibernate.connection.password">root</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.connection.pool_size">1</property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <property name="hibernate.connection.autocommit">true</property>
+    <mapping resource="entity/User.hbm.xml"/>
+    <mapping resource="entity/Warehouse.hbm.xml"/>
+    <mapping resource="entity/Merk.hbm.xml"/>
+    <mapping resource="entity/Category.hbm.xml"/>
+    <mapping resource="entity/Quality.hbm.xml"/>
+    <mapping resource="entity/Packaging.hbm.xml"/>
+    <mapping resource="entity/Item_In.hbm.xml"/>
+    <mapping resource="entity/Item_Out.hbm.xml"/>
+    <mapping resource="entity/Item_In_Warehouse.hbm.xml"/>
+    <mapping resource="entity/Item_Out_Warehouse.hbm.xml"/>
+    <mapping resource="entity/InvoiceSales.hbm.xml"/>
+    <mapping resource="entity/InvoicePurchase.hbm.xml"/>
+    <mapping resource="entity/Production.hbm.xml"/>
+    <mapping resource="entity/InvoiceWarehouseIn.hbm.xml"/>
+    <mapping resource="entity/InvoiceWarehouseOut.hbm.xml"/>
+    <mapping resource="entity/AdjustmentIn.hbm.xml"/>
+    <mapping resource="entity/AdjustmentOut.hbm.xml"/>
+    <mapping resource="entity/ReturnSales.hbm.xml"/>
+    <mapping resource="entity/Plastic.hbm.xml"/>
+    <mapping resource="entity/Plastic_Warehouse.hbm.xml"/>
+    <mapping resource="entity/AdjustmentPlastic.hbm.xml"/>
+    <mapping resource="entity/Production2.hbm.xml"/>
+    <mapping resource="entity/InvoiceSales2.hbm.xml"/>
+    <mapping resource="entity/ReturnPurchase.hbm.xml"/>
+    <mapping resource="entity/Cn.hbm.xml"/>
+    <mapping resource="entity/Production3.hbm.xml"/>
+    <mapping resource="entity/Production4.hbm.xml"/>
+    <mapping resource="entity/AdjustmentCn.hbm.xml"/>
+    <mapping resource="entity/ItemExchange.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

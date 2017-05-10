@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="entity.Production3" table="production3">
+    <id column="id" name="id">
+      <generator class="increment"/>
+    </id>
+    <property column="date" name="date"/>
+    <property column="status" name="status"/>
+    <property column="note" name="note" type="text"/>
+    <many-to-one class="entity.User" column="user_id" lazy="false" name="user"/>
+    <many-to-one class="entity.Warehouse" column="warehouse_id" lazy="false" name="warehouse"/>
+    <many-to-one class="entity.Cn" column="cn_id" lazy="false" name="cn"/>
+    <many-to-one class="entity.Item_Out" column="itemout_id" lazy="false" name="itemout"/>
+    <property column="inquantity" name="inquantity"/>
+    <property column="outquantity" name="outquantity"/>
+    <property column="difference" name="difference"/>
+  </class>
+</hibernate-mapping>

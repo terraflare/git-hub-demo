@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="entity.ItemExchange" table="itemexchange">
+        <id column="id" name="id">
+            <generator class="increment"/>
+        </id>
+        <property column="date" name="date"/>
+        <many-to-one class="entity.User" column="user_id" lazy="false" name="user"/>
+        <many-to-one class="entity.ReturnSales" column="return_id" lazy="false" name="returnsales"/>
+        <many-to-one class="entity.InvoiceSales" column="invoice_id" lazy="false" name="invoicesales"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="entity.Item_Out" table="itemout">
+        <id column="id" name="id">
+            <generator class="increment"/>
+        </id>
+        <property column="name" name="name" unique-key="pack"/>
+        <property column="note" name="note" type="text"/>
+        <property column="active" name="active"/>
+        <property column="sacksize" name="sacksize"/>
+        
+        <many-to-one class="entity.Merk" column="merk_id" lazy="false" name="merk" unique-key="pack"/>
+        <many-to-one class="entity.Packaging" column="packaging_id" lazy="false" name="packaging" unique-key="pack"/>
+        <many-to-one class="entity.Plastic" column="plastic_id" lazy="false" name="plastic"/>
+        <set cascade="none" fetch="select" inverse="true" lazy="false" name="item_warehouses">
+            <key column="item_id"/>
+            <one-to-many class="entity.Item_Out_Warehouse"/>
+        </set>
+    </class>
+</hibernate-mapping>

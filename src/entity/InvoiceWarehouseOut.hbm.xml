@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="entity.InvoiceWarehouseOut" table="invoicewarehouseout">
+        <id column="id" name="id">
+            <generator class="increment"/>
+        </id>
+        <property column="date" name="date"/>
+        <property column="note" name="note" type="text"/>
+        <property column="quantity" name="quantity"/>
+        <property column="status" name="status"/>
+        <many-to-one class="entity.User" column="user_id" lazy="false" name="user"/>
+        <many-to-one class="entity.Warehouse" column="warehouse_id" lazy="false" name="warehouse"/>
+        <many-to-one class="entity.Warehouse" column="destination_id" lazy="false" name="destination"/>
+        <many-to-one class="entity.Item_Out" column="item_id" lazy="false" name="item"/>
+    </class>
+</hibernate-mapping>

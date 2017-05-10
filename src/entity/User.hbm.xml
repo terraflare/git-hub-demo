@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="entity.User" table="user">
+        <id column="id" name="id">
+            <generator class="increment"/>
+        </id>
+        <property column="username" name="username" unique="true"/>
+        <property column="password" name="password"/>
+        <property column="role" name="role"/>
+        <property column="active" name="active"/>
+        <set cascade="none" lazy="false" name="warehouses" table="user_warehouse">
+            <key column="user_id"/>
+            <many-to-many class="entity.Warehouse" column="warehouse_id"/>
+        </set>
+    </class>
+</hibernate-mapping>

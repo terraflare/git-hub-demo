@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="entity.Item_In" table="itemin">
+        <id column="id" name="id">
+            <generator class="increment"/>
+        </id>
+        <property column="name" name="name" unique-key="pack"/>
+        <property column="note" name="note" type="text"/>
+        <property column="active" name="active"/>
+        
+        <many-to-one class="entity.Quality" column="quality_id" lazy="false" name="quality" unique-key="pack"/>
+        <set cascade="none" fetch="select" inverse="true" lazy="false" name="item_warehouses">
+            <key column="item_id"/>
+            <one-to-many class="entity.Item_In_Warehouse"/>
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<connections>
+    <connection>
+        <name>Gula</name>
+        <username>root</username>
+        <password>root</password>
+        <connection>jdbc:mysql://118.136.111.116:3306/</connection>
+        <schema>gula3</schema>
+    </connection>
+    <connection>
+        <name>Gula3</name>
+        <username>root</username>
+        <password>root</password>
+        <connection>jdbc:mysql://localhost:3306/</connection>
+        <schema>gula3</schema>
+    </connection>
+    <connection>
+        <name>New Connection3</name>
+        <username></username>
+        <connection></connection>
+        <schema></schema>
+    </connection>
+    <connection>
+        <name>New Connection4</name>
+        <username></username>
+        <connection></connection>
+        <schema></schema>
+    </connection>
+    <connection>
+        <name>New Connection5</name>
+        <username></username>
+        <connection></connection>
+        <schema></schema>
+    </connection>
+    <connection>
+        <name>New Connection6</name>
+        <username></username>
+        <connection></connection>
+        <schema></schema>
+    </connection>
+    <connection>
+        <name>New Connection7</name>
+        <username></username>
+        <connection></connection>
+        <schema></schema>
+    </connection>
+    <connection>
+        <name>New Connection8</name>
+        <username></username>
+        <connection></connection>
+        <schema></schema>
+    </connection>
+    <connection>
+        <name>New Connection9</name>
+        <username></username>
+        <connection></connection>
+        <schema></schema>
+    </connection>
+    <connection>
+        <name>New Connection10</name>
+        <username></username>
+        <connection></connection>
+        <schema></schema>
+    </connection>
+</connections>
